@@ -1,0 +1,37 @@
+=============
+CONVENCIONES
+=============
+Rank = Posicion que ocupa el Equipo
+nom_equipo = Nombre del equipo
+PT = Puntos totales de la suma de PF+PE
+PF = Puntos totales de Juego de Futbol
+PE = Puntos totales de JUego Excelencia
+GD = Es la diferencia de Goles de GF-GC del equipo
+GF = Goles a favor que tiene el equipo
+GC = Goles en contra que tiene el equipo
+GolF1 = Goles a favor de la fecha 1
+GolF2 = Goles a favor de la fecha 2
+GolF3 = Goles a favor de la fecha 3
+
+/*____GRUPOS____*/
+UPDATE t_grupoa SET PJ=0, PT=0, PF=0, PE=0, GF=0, GC=0, GD=0, GolF1=Null, GolF2=Null, GolF3=Null, PE_F1=Null, PE_F2=Null, PE_F3=Null;
+UPDATE t_grupob SET PJ=0, PT=0, PF=0, PE=0, GF=0, GC=0, GD=0, GolF1=Null, GolF2=Null, GolF3=Null, PE_F1=Null, PE_F2=Null, PE_F3=Null;
+UPDATE t_grupoc SET PJ=0, PT=0, PF=0, PE=0, GF=0, GC=0, GD=0, GolF1=Null, GolF2=Null, GolF3=Null, PE_F1=Null, PE_F2=Null, PE_F3=Null;
+UPDATE t_grupod SET PJ=0, PT=0, PF=0, PE=0, GF=0, GC=0, GD=0, GolF1=Null, GolF2=Null, GolF3=Null, PE_F1=Null, PE_F2=Null, PE_F3=Null;
+UPDATE t_grupoe SET PJ=0, PT=0, PF=0, PE=0, GF=0, GC=0, GD=0, GolF1=Null, GolF2=Null, GolF3=Null, PE_F1=Null, PE_F2=Null, PE_F3=Null;
+UPDATE t_grupof SET PJ=0, PT=0, PF=0, PE=0, GF=0, GC=0, GD=0, GolF1=Null, GolF2=Null, GolF3=Null, PE_F1=Null, PE_F2=Null, PE_F3=Null;
+UPDATE t_grupog SET PJ=0, PT=0, PF=0, PE=0, GF=0, GC=0, GD=0, GolF1=Null, GolF2=Null, GolF3=Null, PE_F1=Null, PE_F2=Null, PE_F3=Null;
+UPDATE t_grupoh SET PJ=0, PT=0, PF=0, PE=0, GF=0, GC=0, GD=0, GolF1=Null, GolF2=Null, GolF3=Null, PE_F1=Null, PE_F2=Null, PE_F3=Null;
+
+/*____CUARTOS____*/
+UPDATE t_llavea_fve SET nom_equipo=NULL, GF=NULL, GC=NULL, PF=NULL, PE=NULL, PT=NULL;
+UPDATE t_llaveb_cvg SET nom_equipo=NULL, GF=NULL, GC=NULL, PF=NULL, PE=NULL, PT=NULL;
+UPDATE t_llavec_bvd SET nom_equipo=NULL, GF=NULL, GC=NULL, PF=NULL, PE=NULL, PT=NULL;
+UPDATE t_llaved_avh SET nom_equipo=NULL, GF=NULL, GC=NULL, PF=NULL, PE=NULL, PT=NULL;
+
+/*____SEMIS____*/
+UPDATE t_semi_a_avsb SET nom_equipo=NULL, GF=NULL, GC=NULL, PF=NULL, PE=NULL, PT=NULL;
+UPDATE t_semi_b_cvsd SET nom_equipo=NULL, GF=NULL, GC=NULL, PF=NULL, PE=NULL, PT=NULL;
+
+/*____FINAL____*/
+UPDATE t_final SET nom_equipo=NULL, GF=NULL, GC=NULL, PF=NULL, PE=NULL, PT=NULL;
