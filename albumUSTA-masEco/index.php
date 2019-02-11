@@ -31,11 +31,11 @@
 		<div class="cajaBienvenida">
 			<p>BIENVENIDO</p>
 			<img class="imgBienvenida" src="img/logos/Santoto_mas_Planeta_blanco.png" alt="Escudo - Mundial de la Excelencia">
-			<p style="font-size:2.7rem;">Próximamente</p>
-			<!-- <div class="grilla btnBienvenida">
+			<!-- <p style="font-size:2.7rem;">Próximamente</p> -->
+			<div class="grilla btnBienvenida">
 				<div class="celda celdax2"><a class="botonUno" href="components/login"><span class="icon-login"></span>  Iniciar sesión</a></div>
 				<div class="celda celdax2"><a class="botonUno" href="components/registro"><span class="icon-registrer"></span>  Registrarse</a></div>
-			</div> -->
+			</div>
 		</div>
 	</div>
 </body>
