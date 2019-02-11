@@ -71,7 +71,7 @@
 			
 				<div class="contentLaminita">
 					<figure>
-						<img src="img/laminitas/<?php print $crow['laminitaLadoA']; ?>.jpg" class="frontal" alt="Cod laminita album | Mundial USTA" />
+						<img src="img/laminitas/<?php print $crow['laminitaLadoA']; ?>.png" class="frontal" alt="Cod laminita album | Mundial USTA" />
 						<figcaption class="trasera">
 							<h3>COD: <?php print $crow['laminitaLadoA']; ?></h3>
 							<p><?php print $crow['laminitaLadoB']; ?></p>
@@ -84,7 +84,7 @@
 				<!-- LAMINITAS EFECT -->
 				<div class="contentLaminita">
 					<figure>
-						<img src="img/laminitas/gris.jpg" class="frontal" alt="Cod laminita album | Mundial USTA" />
+						<img src="img/laminitas/gris.png" class="frontal" alt="Cod laminita album | Mundial USTA" />
 						<figcaption class="trasera">
 							<h5><?php print $crow['id_laminita']; ?></h5>
 							<p>Aun no puedes visualizar este contenido.</p>
