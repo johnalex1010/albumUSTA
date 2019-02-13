@@ -32,13 +32,13 @@ ob_start();
 	<div class="ingresoLaminita">
 		<h2>COD: <?php echo $laminita; ?></h2>
 		<br>
-		<p>Haz ingresado la laminita # <strong><?php echo $rstLaminitas['id_laminita']; ?></strong> correctamente al álbum de la excelencia.</p>
+		<p>Haz ingresado la laminita número <strong><?php echo $rstLaminitas['id_laminita']; ?></strong> correctamente al álbum Santoto + Planeta.</p>
 	</div>
 
 	<div class="contenedorLaminitas">
 		<div class="contentLaminita">
-			<figure>
-				<img src="img/laminitas/<?php print $rstLaminitas['laminitaLadoA']; ?>.jpg" class="frontal" alt="Cod laminita album | Mundial USTA" />
+			<figure class="imgBig">
+				<img src="img/laminitas/<?php print $rstLaminitas['laminitaLadoA']; ?>.png" class="frontal" alt="Cod laminita album | Mundial USTA" />
 				<figcaption class="trasera">
 					<h3>COD: <?php echo $rstLaminitas['laminitaLadoA']; ?></h3>
 					<p><?php print $rstLaminitas['laminitaLadoB']; ?></p>

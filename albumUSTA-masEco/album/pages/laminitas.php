@@ -70,6 +70,7 @@
 			<!-- LAMINITAS EFECT -->
 			
 				<div class="contentLaminita">
+					<a href="album/?op=bigLaminita&big=<?php print $crow['laminitaLadoA']; ?>">
 					<figure>
 						<img src="img/laminitas/<?php print $crow['laminitaLadoA']; ?>.png" class="frontal" alt="Cod laminita album | Mundial USTA" />
 						<figcaption class="trasera">
@@ -77,6 +78,7 @@
 							<p><?php print $crow['laminitaLadoB']; ?></p>
 						</figcaption>
 					</figure>
+					</a>
 				</div>
 		<?php
 			}else{

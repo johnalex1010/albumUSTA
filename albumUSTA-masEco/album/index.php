@@ -51,6 +51,13 @@ switch ($op) {
 		$url = "?op=laminitas";
 		$txt = "Volver al álbum";
 		break;
+	case 'bigLaminita':
+		if ($op."&".$_GET['big']) {
+			$contenido = "pages/bigLaminita.php";
+			$url = "?op=laminitas";	
+			$txt = "Volver al álbum";
+		}
+		break;
 	case 'errorAdicionLaminita':
 		$contenido = "pages/errorAdicionLaminita.php";
 		$url = "?op=laminitas";
@@ -101,8 +108,9 @@ switch ($op) {
 					<p class="pNombre">HOLA <?php echo $row['nombres']." ".$row['apellidos'] ?></p>
 					<nav>
 						<ul>
-							<li><a href="album/?op=perfil"><span class="icon-profile"></span>  <span class="txt_panel">Perfil</span></a></li>
-							<li><a href="album/?op=challenges"><span class="icon-trophy"></span>  <span class="txt_panel">Challenges</span></a></li>
+							<li><a href="album/?op=portada"><span class="icon-home"></span>  <span class="txt_panel">Inicio</span></a></li>
+							<li><a href="album/?op=perfil"><span class="icon-user"></span>  <span class="txt_panel">Perfil</span></a></li>
+							<li><a href="album/?op=challenges"><span class="icon-challenges"></span>  <span class="txt_panel">Challenges</span></a></li>
 							<li><a href="album/?op=premios"><span class="icon-trophy"></span>  <span class="txt_panel">Premios</span></a></li>
 							<?php 
 								if (($row['perfil'] == 1) OR ($row['perfil'] == 2)) {
@@ -119,7 +127,7 @@ switch ($op) {
 					<form action="album/asset/rstAdicionarLaminita.php" method="POST">
 						<p class="pNombre">Ingreso Laminita</p>
 						<div class="grilla">
-							<div class="celda formLaminita"><span class="icon-laminita"></span><input type="text" name="laminita" placeholder="Codigo Laminita"></div>
+							<div class="celda formLaminita"><span class="icon-card"></span><input type="text" name="laminita" placeholder="Codigo Laminita"></div>
 							<div class="celda"><input class="botonDos" type="submit"></div>
 						</div>
 										
@@ -172,7 +180,7 @@ switch ($op) {
 	</section>
 	<footer class="footerAlbum">
 		<p><strong>Universidad Santo Tomás © 2018</strong></p>
-		<h4>USTA + ECO + PLANETA</h4>
+		<h4>SANTOTO + PLANETA</h4>
 		<p>Mayores informes</p>
 		<p>Departamento de Comunicaciones, ext: 1131<br>
 		Coordinación Gestión Ambiental, ext: 1903</p>
