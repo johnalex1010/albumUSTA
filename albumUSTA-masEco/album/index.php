@@ -74,9 +74,6 @@ switch ($op) {
 		$txt = "Abrir álbum";
 		break;
 }
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="es_CO">
@@ -84,7 +81,7 @@ switch ($op) {
 	<base href="<?php echo $URLBase ?>">
 	<!-- METAS -->
 	<meta charset="UTF-8" />
-	<title>Album | Mundial de la Excelencia</title>
+	<title>Albúm | Santoto + Planeta</title>
 	<meta http-equiv="X-UA-Compatible" content="EDGE" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />	
 	<meta name="description" content="Album | Mundial de la Excelencia USTA"/>
@@ -185,6 +182,7 @@ switch ($op) {
 		<p>Departamento de Comunicaciones, ext: 1131<br>
 		Coordinación Gestión Ambiental, ext: 1903</p>
 		<p>Todos los derechos reservados.</p>
+		<p>Diseño y desarrollo, Departamento de Comunicaciones</p>
 	</footer>
 
 	
@@ -192,3 +190,17 @@ switch ($op) {
 	<script src="js/main-min.js"></script>
 </body>
 </html>
+<?php
+// echo $h = date("Y-m-d h:i:s");
+// echo $h = "2019-02-28 05:52:34";
+// echo "<br>";
+// echo $b ="2019-02-28 05:52:33";
+// echo "<br>";
+// if ($h == $b) {
+// 	echo "es igual";
+// }elseif ($h > $b) {
+// 	echo "es mayor";
+// }else{
+// 	echo "es menor";
+// }
+?>

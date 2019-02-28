@@ -8,7 +8,7 @@
 		
 		echo $usuario = $_SESSION['usuario'];
 		$laminita = strtoupper($_POST['laminita']);
-		$fechaLaminita = date("Y-m-d");
+		$fechaLaminita = date("Y-m-d h:i:s");
 		
 		require_once("../../components/otros/iniciales.php");
 		require_once("../../components/otros/conexion.php");

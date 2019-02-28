@@ -5,7 +5,7 @@
 //====================================================
 
 // Crear Tabla
-$sqlCreateBDTable = "CREATE TABLE t_album_".$usuario." (id_laminita int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, laminitaLadoA varchar(10) COLLATE utf8_spanish2_ci NOT NULL, laminitaLadoB text COLLATE utf8_spanish2_ci NOT NULL, visualizar int(2) NOT NULL, fechaLaminita date NOT NULL);";
+$sqlCreateBDTable = "CREATE TABLE t_album_".$usuario." (id_laminita int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, laminitaLadoA varchar(10) COLLATE utf8_spanish2_ci NOT NULL, laminitaLadoB text COLLATE utf8_spanish2_ci NOT NULL, visualizar int(2) NOT NULL, fechaLaminita datetime NOT NULL);";
 $resulSqlTBD = $conexion->query($sqlCreateBDTable);
 
 

@@ -13,7 +13,7 @@
 			<a href="album/?op=cambioPass" class="botonDos">Cambiar contraseña</a>
 		</div>
 		<div class="celda celdax2">
-			<h3 class="titleContent">TOP 10 - ÁLBUM EXCELENCIA</h3>
+			<h3 class="titleContent">TOP 10</h3>
 			<table class="tablaDatos">
 				<tr>
 					<th>Posición</th>

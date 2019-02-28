@@ -16,7 +16,7 @@ ob_start();
 	<base href="<?php echo $URLBase ?>">
 	<!-- METAS -->
 	<meta charset="UTF-8" />
-	<title>Album | Mundial de la Excelencia</title>
+	<title>Albúm | Santoto + Planeta</title>
 	<meta http-equiv="X-UA-Compatible" content="EDGE" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />	
 	<meta name="description" content="Album | Mundial de la Excelencia USTA"/>

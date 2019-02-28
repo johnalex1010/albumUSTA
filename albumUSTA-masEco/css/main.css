@@ -248,9 +248,8 @@ table{
 .bgInicio{
   background-image: url('../img/logos/bg.jpg');
   background-repeat:no-repeat;
-  background-position: bottom center;
-
-
+  background-position: center center;
+  background-size: cover;
 }
 .contentFlex{
 	min-height: 100vh;

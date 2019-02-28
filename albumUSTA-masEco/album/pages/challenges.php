@@ -8,7 +8,7 @@
 	</div>
 	<div class="celda celdax3">
 		<div class="contentChallenge">
-			<iframe src="https://www.instagram.com/johnalex1010/" frameborder="0"></iframe>
+			<iframe src="https://twitter.com/hashtag/DragonBall" frameborder="0" height="500px"></iframe>
 		</div>
 	</div>
 	<div class="celda celdax3">
