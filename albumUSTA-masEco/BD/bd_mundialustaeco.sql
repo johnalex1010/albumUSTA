@@ -30,12 +30,14 @@ CREATE TABLE `t_user_album` (
   `apellidos` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `documento` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
   `email` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `sede` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `usuario` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
   `password` text COLLATE utf8_spanish_ci NOT NULL,
   `habeas` varchar(2) COLLATE utf8_spanish_ci NOT NULL,
   `fechaRegis` date NOT NULL,
   `perfil` int(11) NOT NULL,
-  `porcentaje` decimal(14,2) NOT NULL
+  `porcentaje` decimal(14,2) NOT NULL,
+  `ultimaFechaLaminita` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --

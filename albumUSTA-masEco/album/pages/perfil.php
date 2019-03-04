@@ -8,12 +8,12 @@
 				<li><span class="icon-hashtag"></span><strong> Numero de documento:</strong> <?php echo $row['documento'] ?></li>
 				<li><span class="icon-arroba"></span><strong> Correo:</strong> <?php echo $row['email'] ?></li>
 				<li><span class="icon-profile"></span><strong> Usuario:</strong> <?php echo $row['usuario'] ?></li>
-<!-- 				<li><span class="icon-top10"></span><strong> Posición en la tabla general:</strong> <?php echo $td['rank'] ?></li> -->
+			<!-- <li><span class="icon-top10"></span><strong> Posición en la tabla general:</strong> <?php echo $td['rank'] ?></li> -->
 			</ul>
 			<a href="album/?op=cambioPass" class="botonDos">Cambiar contraseña</a>
 		</div>
 		<div class="celda celdax2">
-			<h3 class="titleContent">TOP 10</h3>
+			<h3 class="titleContent">TOP 10 - USTA COLOMBIA</h3>
 			<table class="tablaDatos">
 				<tr>
 					<th>Posición</th>
@@ -39,6 +39,7 @@
 				<?php } ?>
 
 			</table>
+			<a href="album/?op=topFiveSedes">Ver TOP 5 de sedes y seccionales</a>
 		</div>
 	</div>
 </div>

@@ -22,7 +22,6 @@
 	</tr>
 	<?php
 		while($td = mysqli_fetch_array($tabla1)){
-		# code...
 	?>
 	<tr>
 		<td><?php echo $td['fechaRegis'] ?></td>

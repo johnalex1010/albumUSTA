@@ -1,4 +1,5 @@
-<?php 
+<?php
+session_start();
 	while ($statics2=mysqli_fetch_array($statics22)) {
 		// mysqli_select_db($conexion,$prefijo.$statics2['usuario']);
 
@@ -21,7 +22,7 @@
 		if ($porcentaje == $statics2['porcentaje']) {}
 		else{
 			// mysqli_select_db($conexion,$db_name);
-			$up = "UPDATE t_user_album SET porcentaje='".$porcentaje."' WHERE usuario='".$statics2['usuario']."'";
+			$up = "UPDATE t_user_album SET porcentaje='".$porcentaje."', ultimaFechaLaminita='".$_SESSION['ultimaFechaLaminita']."' WHERE usuario='".$statics2['usuario']."'";
 			$upT = $conexion->query($up);
 		}
 

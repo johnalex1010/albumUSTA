@@ -6,9 +6,9 @@
 
 	if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 		
-		echo $usuario = $_SESSION['usuario'];
+		$usuario = $_SESSION['usuario'];
 		$laminita = strtoupper($_POST['laminita']);
-		$fechaLaminita = date("Y-m-d h:i:s");
+		$_SESSION['ultimaFechaLaminita'] = $fechaLaminita = date("Y-m-d h:i:s");
 		
 		require_once("../../components/otros/iniciales.php");
 		require_once("../../components/otros/conexion.php");

@@ -32,6 +32,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-top:before {
+  content: "\e90b";
+}
+.icon-arroba:before {
+  content: "\e908";
+}
+.icon-hashtag:before {
+  content: "\e909";
+}
+.icon-password:before {
+  content: "\e90a";
+}
 .icon-card:before {
   content: "\e906";
 }
@@ -56,6 +68,7 @@
 .icon-signOff:before {
   content: "\e905";
 }
+
 
 
 
@@ -864,6 +877,9 @@ padding: 1rem;
   .perfil li{
     font-size: 1rem;
   }
+}
+.top5Sedes{
+  width: 100%;
 }
 /*Cambio password*/
 .cambioPass{

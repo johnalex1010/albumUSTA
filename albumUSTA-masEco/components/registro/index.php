@@ -9,7 +9,6 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 }
 	require_once("../otros/iniciales.php");
 	require_once("../otros/conexion.php");
-	require_once("../otros/querys.php");	
 
 //VARIABLES PARA REMPLAZO DE CARACTERES NO VALIDOS (Evitar los ataque de inyección)
 	// $caraterNoValido = "<|>|&lt;|&gt;|'|{|}|;|VALUES|SELECT|INSERT|INTO|FROM|http|%|www|LIKE|ZAP|example|cookie|any|foo|)";
@@ -51,6 +50,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 		$ClassErrorUsuario = "";
 		$ClassErrorHabeas = "";
 
+		require_once("../otros/querys.php");
 
 
 		//VALIDO NOMBRES
@@ -104,6 +104,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 			if (intval($documento)){
 
 				//HACE EL CONTEO DE REGISTROS DE LA TABLA
+
 				$countDoc = mysqli_num_rows($resultDoc);
 
 				if ($countDoc > 0) {
@@ -154,6 +155,32 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 				$ClassErrorEmail = "error";
 			}
 
+		}
+		//=================
+
+		// SEDE
+		switch ($correoPartDos) {
+			case 'usantotomas.edu.co':
+				$_SESSION['sede'] = "Bogotá";
+				break;
+			case 'ustatunja.edu.co':
+				$_SESSION['sede'] = "Tunja";
+				break;
+			case 'ustamed.edu.co':
+				$_SESSION['sede'] = "Medellín";
+				break;
+			case 'ustabuca.edu.co':
+				$_SESSION['sede'] = "Bucaramanga";
+				break;
+			case 'ustavillavicencio.edu.co':
+				$_SESSION['sede'] = "Villavicencio";
+				break;
+			case 'ustadistancia.edu.co':
+				$_SESSION['sede'] = "Distancia";
+				break;
+			default:
+				# code...
+				break;
 		}
 		//=================
 
@@ -254,14 +281,14 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 						<div class="celda celdax2">
 							<p class="<?php echo $ClassErrorNombres ?>"><?php echo $msjNombres ?></p>
 							<div class="cajaInput">
-								<span class="icon-profile"></span>
+								<span class="icon-user"></span>
 								<input placeholder="Nombre(s)" name="nombres" type="text" value="<?php echo $nombres ?>">
 							</div>
 						</div>
 						<div class="celda celdax2">
 							<p class="<?php echo $ClassErrorApellidos ?>"><?php echo $msjApellidos ?></p>
 							<div class="cajaInput">
-								<span class="icon-profile"></span>
+								<span class="icon-user"></span>
 								<input placeholder="Apellido(s)" name="apellidos" type="text" value="<?php echo $apellidos ?>">
 							</div>
 						</div>
@@ -286,7 +313,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 						<div class="celda">
 							<p class="<?php echo $ClassErrorUsuario ?>"><?php echo $msjUsuario ?></p>
 							<div class="cajaInput">
-								<span class="icon-profile"></span>
+								<span class="icon-user"></span>
 								<input placeholder="Usuario" title="Recuerde que solo puede utlizar (numeros, letras y guiones) y máximo de 12 caracteres." name="usuario" type="text" value="<?php echo $usuario ?>">
 							</div>
 						</div>

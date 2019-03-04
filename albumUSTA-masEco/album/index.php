@@ -51,6 +51,11 @@ switch ($op) {
 		$url = "?op=laminitas";
 		$txt = "Volver al álbum";
 		break;
+	case 'topFiveSedes':
+		$contenido = "pages/topFiveSedes.php";
+		$url = "?op=laminitas";
+		$txt = "Volver al álbum";
+		break;
 	case 'bigLaminita':
 		if ($op."&".$_GET['big']) {
 			$contenido = "pages/bigLaminita.php";
@@ -107,6 +112,7 @@ switch ($op) {
 						<ul>
 							<li><a href="album/?op=portada"><span class="icon-home"></span>  <span class="txt_panel">Inicio</span></a></li>
 							<li><a href="album/?op=perfil"><span class="icon-user"></span>  <span class="txt_panel">Perfil</span></a></li>
+							<li><a href="album/?op=topFiveSedes"><span class="icon-top"></span>  <span class="txt_panel">Top 5 - Sedes  y Seccionales</span></a></li>
 							<li><a href="album/?op=challenges"><span class="icon-challenges"></span>  <span class="txt_panel">Challenges</span></a></li>
 							<li><a href="album/?op=premios"><span class="icon-trophy"></span>  <span class="txt_panel">Premios</span></a></li>
 							<?php 

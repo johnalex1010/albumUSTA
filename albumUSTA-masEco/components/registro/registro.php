@@ -20,10 +20,10 @@ ob_start();
 		echo $apellidos = $_SESSION['apellidos'];
 		echo $documento = $_SESSION['documento'];
 		echo $email = $_SESSION['email'];	
+		echo $sede = $_SESSION['sede'];
 		echo $usuario = $_SESSION['usuario'];
 		echo $password = $_SESSION['password'];
 		echo $habeas = $_SESSION['habeas'];
-
 		echo $userBD = $prefijo."$usuario";
 
 		require_once("../otros/querys.php");

@@ -1,3 +1,5 @@
 <div class="portadaAlbum">
-	<img src="img/otros/portadaAlbum.png" alt="Porta Album de la Excelencia">
+	<a href="album/?op=laminitas">
+		<img src="img/otros/portadaAlbum.png" alt="Porta Album de la Excelencia">
+	</a>
 </div>

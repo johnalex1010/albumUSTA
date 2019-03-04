@@ -105,6 +105,3 @@
 </div>
 </div>
 <!-- Fin Mostrar Laminita -->
-
-
-

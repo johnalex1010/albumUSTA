@@ -40,7 +40,7 @@ ob_start();
 							<p class="<?php echo $_SESSION['msjEmail'] ?>"><?php echo $_SESSION['msjEmailTxt'] ?></p>
 							<p class="<?php echo $_SESSION['classError'] ?>"><?php echo $_SESSION['msjLogin'] ?></p>
 							<div class="cajaInput">
-								<span class="icon-profile"></span>
+								<span class="icon-user"></span>
 								<input class="input" type="text" name="usuario" placeholder="Usuario" required>
 							</div>	
 						</div>
