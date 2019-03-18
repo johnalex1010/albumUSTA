@@ -480,6 +480,7 @@ padding: 1rem;
 .footerAlbum{
   box-shadow: 0 -3px  #8A9E76, 0 -6px #52663C;
   text-align: center;
+  font-size: 0.9rem;
 }
 .footerAlbum p{
   margin-bottom: 1rem;

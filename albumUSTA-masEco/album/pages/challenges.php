@@ -3,16 +3,18 @@
 <div class="grilla">
 	<div class="celda celdax3">
 		<div class="contentChallenge">
-			a
+			<img src="img/challenge/OrgullosamenteTomasino_Face.png" alt="Challenge Facebook">
 		</div>
 	</div>
 	<div class="celda celdax3">
 		<div class="contentChallenge">
-			<iframe src="https://twitter.com/hashtag/DragonBall" frameborder="0" height="500px"></iframe>
+			<img src="img/challenge/OrgullosamenteTomasino_Insta.png" alt="Challenge Instagram">
 		</div>
 	</div>
 	<div class="celda celdax3">
-		<div class="contentChallenge">Facebook</div>
+		<div class="contentChallenge">
+			<img src="img/challenge/OrgullosamenteTomasino_Twitt.png" alt="Challenge Twitter">
+		</div>
 	</div>
 </div>
 </div>

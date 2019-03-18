@@ -28,7 +28,7 @@
 			</table>
 		</div>
 		<div class="celda celdax3">
-			<h3 class="titleContent">TOP 5 - MEDELLÍN</h3>
+			<h3 class="titleContent">TOP 5 - USTA DISTANCIA</h3>
 			<table class="tablaDatos">
 				<tr>
 					<th>Posición</th>
@@ -36,7 +36,7 @@
 					<th>Progreso</th>
 				</tr>
 				<?php 
-					while($td = mysqli_fetch_array($tabla1Medellin)){
+					while($td = mysqli_fetch_array($tabla1Distancia)){
 				?>				
 				<tr>
 					<td><?php echo $td['rank'] ?></td>					
@@ -54,6 +54,7 @@
 				<?php } ?>
 			</table>
 		</div>
+		
 		<div class="celda celdax3">
 			<h3 class="titleContent">TOP 5 - BUCARAMANGA</h3>
 			<table class="tablaDatos">
@@ -112,7 +113,7 @@
 			</table>
 		</div>
 		<div class="celda celdax3">
-			<h3 class="titleContent">TOP 5 - VILLAVICENCIO</h3>
+			<h3 class="titleContent">TOP 5 - MEDELLÍN</h3>
 			<table class="tablaDatos">
 				<tr>
 					<th>Posición</th>
@@ -120,7 +121,7 @@
 					<th>Progreso</th>
 				</tr>
 				<?php 
-					while($td = mysqli_fetch_array($tabla1Villavicencio)){
+					while($td = mysqli_fetch_array($tabla1Medellin)){
 				?>				
 				<tr>
 					<td><?php echo $td['rank'] ?></td>					
@@ -139,7 +140,7 @@
 			</table>
 		</div>
 		<div class="celda celdax3">
-			<h3 class="titleContent">TOP 5 - USTA DISTANCIA</h3>
+			<h3 class="titleContent">TOP 5 - VILLAVICENCIO</h3>
 			<table class="tablaDatos">
 				<tr>
 					<th>Posición</th>
@@ -147,7 +148,7 @@
 					<th>Progreso</th>
 				</tr>
 				<?php 
-					while($td = mysqli_fetch_array($tabla1Distancia)){
+					while($td = mysqli_fetch_array($tabla1Villavicencio)){
 				?>				
 				<tr>
 					<td><?php echo $td['rank'] ?></td>					

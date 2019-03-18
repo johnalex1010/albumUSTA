@@ -182,11 +182,11 @@ switch ($op) {
 		</div>
 	</section>
 	<footer class="footerAlbum">
-		<p><strong>Universidad Santo Tomás © 2018</strong></p>
+		<p><strong>Universidad Santo Tomás © 2019</strong></p>
 		<h4>SANTOTO + PLANETA</h4>
 		<p>Mayores informes</p>
-		<p>Departamento de Comunicaciones, ext: 1131<br>
-		Coordinación Gestión Ambiental, ext: 1903</p>
+		<p>Departamento de Comunicaciones, tel: 587 87 97 ext: 1131<br>
+		Coordinación Gestión Ambiental, tel: 587 87 97 ext: 1903</p>
 		<p>Todos los derechos reservados.</p>
 		<p>Diseño y desarrollo, Departamento de Comunicaciones</p>
 	</footer>
