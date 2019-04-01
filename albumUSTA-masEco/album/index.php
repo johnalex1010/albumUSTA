@@ -189,6 +189,7 @@ switch ($op) {
 		Coordinación Gestión Ambiental, tel: 587 87 97 ext: 1903</p>
 		<p>Todos los derechos reservados.</p>
 		<p>Diseño y desarrollo, Departamento de Comunicaciones</p>
+		<p>terminos y condiciones <a href="docs/Terminos_y_Condiciones.pdf" target="_blank">aquí</a></p>
 	</footer>
 
 	

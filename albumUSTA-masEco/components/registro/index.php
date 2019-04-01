@@ -339,7 +339,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 							<p class="<?php echo $ClassErrorHabeas ?>"><?php echo $msjHabeas ?></p>
 							<div class="cajaInput">
 								<input type="checkbox" name="habeas" value="1">
-								<p class="pHabeas">Aceptar terminos y condiciones <a href="docs/Terminos_y_Condiciones.pdf" target="_blank">Aqui</a></p>
+								<p class="pHabeas">Aceptar terminos y condiciones <a href="docs/Terminos_y_Condiciones.pdf" target="_blank">aquí</a></p>
 							</div>
 						</div>
 					<div class="grilla">
