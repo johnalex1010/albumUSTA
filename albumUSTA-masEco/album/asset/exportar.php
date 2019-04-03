@@ -35,6 +35,7 @@
 			<th>Fecha Regsitro</th>
 			<th>Nombres</th>
 			<th>Documento</th>
+			<th>Sede</th>
 			<th>Correo</th>
 			<th>Usuario</th>
 			<th>Protección de datos</th>
@@ -59,7 +60,9 @@
 			<td><?php echo $td['id_usuario'] ?></td>
 			<td><?php echo $td['fechaRegis'] ?></td>
 			<td><?php echo $td['nombres']." ". $td['apellidos'] ?></td>
+			
 			<td><?php echo $td['documento'] ?></td>
+			<td><?php echo $td['sede'] ?></td>
 			<td><?php echo $td['email'] ?></td>
 			<td><?php echo $td['usuario'] ?></td>
 			<?php if ($td['habeas'] == 1) {	?> <td>SI</td><?php } ?>
@@ -82,7 +85,9 @@
 			<td><?php echo $td['id_usuario'] ?></td>
 			<td><?php echo $td['fechaRegis'] ?></td>
 			<td><?php echo $td['nombres']." ". $td['apellidos'] ?></td>
+			
 			<td><?php echo $td['documento'] ?></td>
+			<td><?php echo $td['sede'] ?></td>
 			<td><?php echo $td['email'] ?></td>
 			<td><?php echo $td['usuario'] ?></td>
 			<?php if ($td['habeas'] == 1) {	?> <td>SI</td><?php } ?>

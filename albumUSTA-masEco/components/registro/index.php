@@ -38,6 +38,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 		$apellidos = ucwords(trim(htmlspecialchars(str_replace($exp_regular, $reemplazoCaracter, $_POST["apellidos"]))));
 		$email = trim(htmlspecialchars(str_replace($exp_regular, $reemplazoCaracter, $_POST["email"])));
 		$documento = trim($_POST["documento"]);
+		$sede = $_POST['sede'];
 		$usuario = trim(htmlspecialchars($_POST["usuario"]));
 		$password = $_POST['password'];
 		$rePassword = $_POST['rePassword'];
@@ -66,7 +67,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 					$ClassErrorNombres = "error";
 				}
 			}else{
-				$msjNombres = "Caracteres NO validos para este campo.";
+				$msjNombres = "Caracteres NO válidos para este campo.";
 				$ClassErrorNombres = "error";
 			}
 		}
@@ -75,7 +76,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
 		//VALIDO APELLIDOS
 		if (empty($apellidos)) {
-			$msjApellidos = "El campo Apellido(s) está vacio.";
+			$msjApellidos = "El campo Apellido(s) está vacío.";
 			$ClassErrorApellidos = "error";
 		}else{
 			if (preg_match($permitidos,$apellidos)) {
@@ -86,7 +87,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 					$ClassErrorApellidos = "error";
 				}
 			}else{
-				$msjApellidos = "Caracteres NO validos para este campo.";
+				$msjApellidos = "Caracteres NO válidos para este campo.";
 				$ClassErrorApellidos = "error";
 			}
 		}
@@ -95,10 +96,10 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
 		//VALIDO DOCUMENTO
 		if (empty($documento)) {
-			$msjDocumento = "El campo Numero de Documento está vacio	.";
+			$msjDocumento = "El campo número de documento está vacío.";
 			$ClassErrorDocumento = "error";
 		}elseif (!is_numeric($documento)) {
-			$msjDocumento = "No es un numero.";
+			$msjDocumento = "No es un número.";
 			$ClassErrorDocumento = "error";
 		}elseif (strlen($documento)>=7 & strlen($documento)<=15) {
 			if (intval($documento)){
@@ -108,14 +109,14 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 				$countDoc = mysqli_num_rows($resultDoc);
 
 				if ($countDoc > 0) {
-					$msjDocumento =  "Este Documento ya a sido registrado.";
+					$msjDocumento =  "Este Documento ya ha sido registrado.";
 					$ClassErrorDocumento = "error";
 				}
 				else{
 					$_SESSION['documento']=$documento;
 				}				
 			}else{
-				$msjDocumento = "El Documento ingresado no es valido.";
+				$msjDocumento = "El Documento ingresado no es válido.";
 				$ClassErrorDocumento = "error";
 			}
 		}else{
@@ -126,21 +127,21 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
 		//VALIDO EMAIL
 		if (empty($email)) {
-			$msjEmail = "El campo Correo está vacio.";
+			$msjEmail = "El campo Correo está vacío.";
 			$ClassErrorEmail = "error";
 		}elseif (strlen($email)>=2 || strlen($email)<=60){
 			if(preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $email)) {
 				
 
 				list($correoPartUno, $correoPartDos) = preg_split('[@]', $email);
-				if (($correoPartDos == "usantotomas.edu.co") || ($correoPartDos == "ustatunja.edu.co") || ($correoPartDos == "ustamed.edu.co") || ($correoPartDos == "ustabuca.edu.co") || ($correoPartDos == "ustavillavicencio.edu.co") || ($correoPartDos == "ustadistancia.edu.co")){
+				if (($correoPartDos == "usantotomas.edu.co") || ($correoPartDos == "ustatunja.edu.co") || ($correoPartDos == "ustamed.edu.co") || ($correoPartDos == "ustabuca.edu.co") || ($correoPartDos == "ustavillavicencio.edu.co") || ($correoPartDos == "ustadistancia.edu.co") || ($correoPartDos == "usantoto.edu.co")){
 
 
 					//HACE EL CONTEO DE REGISTROS DE LA TABLA
 					$countEmail = mysqli_num_rows($resultEmail);
 
 					if ($countEmail > 0) {
-						$msjEmail =  "Este Correo ya a sido registrado.";
+						$msjEmail =  "Este Correo ya ha sido registrado.";
 						$ClassErrorEmail = "error";
 					}
 					else{
@@ -151,7 +152,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 					$ClassErrorEmail = "error";
 				}
 			}else{
-				$msjEmail = "El Correo NO es valido.";
+				$msjEmail = "El Correo NO es válido.";
 				$ClassErrorEmail = "error";
 			}
 
@@ -159,34 +160,43 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 		//=================
 
 		// SEDE
-		switch ($correoPartDos) {
-			case 'usantotomas.edu.co':
-				$_SESSION['sede'] = "Bogotá";
-				break;
-			case 'ustatunja.edu.co':
-				$_SESSION['sede'] = "Tunja";
-				break;
-			case 'ustamed.edu.co':
-				$_SESSION['sede'] = "Medellín";
-				break;
-			case 'ustabuca.edu.co':
-				$_SESSION['sede'] = "Bucaramanga";
-				break;
-			case 'ustavillavicencio.edu.co':
-				$_SESSION['sede'] = "Villavicencio";
-				break;
-			case 'ustadistancia.edu.co':
-				$_SESSION['sede'] = "Distancia";
-				break;
-			default:
-				# code...
-				break;
+		if (empty($sede)) {
+			$msjSede = "Debe seleccionar una Sede";
+			$ClassErrorSede = "error";
+		}else{
+			$_SESSION['sede'] = $sede;
 		}
+
+		// switch ($correoPartDos) {
+		// 	case 'usantotomas.edu.co':
+		// 		$_SESSION['sede'] = "Bogotá";
+		// 		break;
+		// 	case 'ustatunja.edu.co':
+		// 		$_SESSION['sede'] = "Tunja";
+		// 		break;
+		// 	case 'ustamed.edu.co':
+		// 		$_SESSION['sede'] = "Medellín";
+		// 		break;
+		// 	case 'ustabuca.edu.co':
+		// 		$_SESSION['sede'] = "Bucaramanga";
+		// 		break;
+		// 	case 'ustavillavicencio.edu.co':
+		// 		$_SESSION['sede'] = "Villavicencio";
+		// 		break;
+		// 	case 'ustadistancia.edu.co':
+		// 		$_SESSION['sede'] = "Distancia";
+		// 		break;
+		// 	default:
+		// 		# code...
+		// 		break;
+		// }
+
+
 		//=================
 
 		//VALIDO USUARIO
 		if (empty($usuario)) {
-			$msjUsuario = "El campo Usuario está vacio.";
+			$msjUsuario = "El campo Usuario está vacío.";
 			$ClassErrorUsuario = "error";
 		}else{
 			$permitidosUsuario = '/^[a-zA-Z0-9_-]{1,50}$/i';
@@ -196,7 +206,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 					
 					$count = mysqli_num_rows($resultUsuario);
 					if ($count > 0) {
-						$msjUsuario =  "Este Usuario ya a sido registrado.";
+						$msjUsuario =  "Este Usuario ya ha sido registrado.";
 						$ClassErrorUsuario = "error";
 					}
 					else{
@@ -204,12 +214,12 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 					}
 
 				}else{
-					$msjUsuario = "Recuerde que solo puede utlizar (numeros, letras y guiones) y máximo de 12 caracteres.";
+					$msjUsuario = "Recuerde que solo puede utilizar (números, letras y guiones bajos) y máximo de 12 caracteres.";
 					$ClassErrorUsuario = "error";
 				}
 
 			}else{
-				$msjUsuario = "Recuerde que solo puede utlizar (numeros, letras y guiones) y máximo de 12 caracteres.";
+				$msjUsuario = "Recuerde que solo puede utilizar (números, letras y guiones bajos) y máximo de 12 caracteres.";
 				$ClassErrorUsuario = "error";
 			}
 		}
@@ -217,7 +227,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
 		//VALIDO PASSWORD
 		if (empty($password)) {
-			$msjPass = "Los campos están vacios";
+			$msjPass = "Los campos están vacíos";
 			$ClassErrorPass = "error";
 		}elseif (strlen($password)>=5 & strlen($password)<=16) {
 			if ($password == $rePassword) {
@@ -311,10 +321,31 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 					</div>
 					<div class="grilla">
 						<div class="celda">
+							<p class="<?php echo $ClassErrorSede ?>"><?php echo $msjSede ?></p>
+							<div class="cajaInput">
+								<span class="icon-user"></span>
+								<select name="sede" id="">
+								<?php if (empty($sede)): ?>
+									<option value="" disabled selected style="color: #ccc;">Seleccione una sede</option>
+								<?php else: ?>
+									<option value="<?php echo $sede ?>" selected><?php echo $sede ?></option>
+								<?php endif ?>									
+									<option value="Bogotá">Sede Principal Bogotá</option>
+									<option value="Distancia">Educación a Distancia</option>
+									<option value="Bucaramanga">Seccional Bucaramanga</option>
+									<option value="Tunja">Seccional Tunja</option>
+									<option value="Medellín">Sede Medellín</option>
+									<option value="Villavicencio">Sede Villavicencio</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="grilla">
+						<div class="celda">
 							<p class="<?php echo $ClassErrorUsuario ?>"><?php echo $msjUsuario ?></p>
 							<div class="cajaInput">
 								<span class="icon-user"></span>
-								<input placeholder="Usuario" title="Recuerde que solo puede utlizar (numeros, letras y guiones) y máximo de 12 caracteres." name="usuario" type="text" value="<?php echo $usuario ?>">
+								<input placeholder="Usuario" title="Recuerde que solo puede utilizar (números, letras y guiones bajos) y máximo de 12 caracteres. NO se aceptan guion medio ( - )" name="usuario" type="text" value="<?php echo $usuario ?>">
 							</div>
 						</div>
 					</div>
@@ -339,7 +370,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 							<p class="<?php echo $ClassErrorHabeas ?>"><?php echo $msjHabeas ?></p>
 							<div class="cajaInput">
 								<input type="checkbox" name="habeas" value="1">
-								<p class="pHabeas">Aceptar terminos y condiciones <a href="docs/Terminos_y_Condiciones.pdf" target="_blank">aquí</a></p>
+								<p class="pHabeas">Aceptar términos y condiciones <a href="docs/Terminos_y_Condiciones.pdf" target="_blank">aquí</a></p>
 							</div>
 						</div>
 					<div class="grilla">

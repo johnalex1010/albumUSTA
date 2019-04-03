@@ -13,18 +13,18 @@ ob_start();
 	mysqli_set_charset($conexion,"utf8");
 
 
-	if(isset($_SESSION['nombres']) && isset($_SESSION['apellidos']) && isset($_SESSION['documento']) && isset($_SESSION['email']) && isset($_SESSION['usuario']) && isset($_SESSION['password']) && isset($_SESSION['habeas'])){
+	if(isset($_SESSION['nombres']) && isset($_SESSION['apellidos']) && isset($_SESSION['documento']) && isset($_SESSION['email']) && isset($_SESSION['sede']) && isset($_SESSION['usuario']) && isset($_SESSION['password']) && isset($_SESSION['habeas'])){
 		
 		$fechaRegis = date("Y-m-d");
-		echo $nombres = $_SESSION['nombres'];
-		echo $apellidos = $_SESSION['apellidos'];
-		echo $documento = $_SESSION['documento'];
-		echo $email = $_SESSION['email'];	
-		echo $sede = $_SESSION['sede'];
-		echo $usuario = $_SESSION['usuario'];
-		echo $password = $_SESSION['password'];
-		echo $habeas = $_SESSION['habeas'];
-		echo $userBD = $prefijo."$usuario";
+		$nombres = $_SESSION['nombres'];
+		$apellidos = $_SESSION['apellidos'];
+		$documento = $_SESSION['documento'];
+		$sede = $_SESSION['sede'];
+		$email = $_SESSION['email'];	
+		$usuario = $_SESSION['usuario'];
+		$password = $_SESSION['password'];
+		$habeas = $_SESSION['habeas'];
+		$userBD = $prefijo."$usuario";
 
 		require_once("../otros/querys.php");
 
@@ -36,7 +36,8 @@ ob_start();
 			require_once("creacionBD.php");
 			
 			//Elimino las variables de Sesión
-			unset ($_SESSION['nombres']);	
+			unset ($_SESSION['nombres']);
+			unset ($_SESSION['sede']);
 			unset ($_SESSION['apellidos']);
 			unset ($_SESSION['email']);
 			unset ($_SESSION['documento']);
@@ -55,6 +56,7 @@ ob_start();
 
 		}else{
 			unset ($_SESSION['nombres']);
+			unset ($_SESSION['sede']);
 			unset ($_SESSION['apellidos']);
 			unset ($_SESSION['email']);
 			unset ($_SESSION['usuario']);
