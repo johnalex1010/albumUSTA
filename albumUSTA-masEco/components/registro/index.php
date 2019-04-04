@@ -34,12 +34,16 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
 	//Preguntar si existe el POST de FORMULARIO
 	if ($_POST) {
+		function limpia_espacios($cadena){
+			$cadena = str_replace(' ', '', $cadena);
+			return $cadena;
+		}
 		$nombres = ucwords(trim(htmlspecialchars(str_replace($exp_regular, $reemplazoCaracter, $_POST["nombres"]))));
 		$apellidos = ucwords(trim(htmlspecialchars(str_replace($exp_regular, $reemplazoCaracter, $_POST["apellidos"]))));
 		$email = trim(htmlspecialchars(str_replace($exp_regular, $reemplazoCaracter, $_POST["email"])));
 		$documento = trim($_POST["documento"]);
 		$sede = $_POST['sede'];
-		$usuario = trim(htmlspecialchars($_POST["usuario"]));
+		$usuario = limpia_espacios(trim(htmlspecialchars($_POST["usuario"])));
 		$password = $_POST['password'];
 		$rePassword = $_POST['rePassword'];
 		$habeas = $_POST['habeas'];
@@ -50,6 +54,8 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 		$ClassErrorDocumento = "";
 		$ClassErrorUsuario = "";
 		$ClassErrorHabeas = "";
+
+		
 
 		require_once("../otros/querys.php");
 
@@ -199,7 +205,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 			$msjUsuario = "El campo Usuario está vacío.";
 			$ClassErrorUsuario = "error";
 		}else{
-			$permitidosUsuario = '/^[a-zA-Z0-9_-]{1,50}$/i';
+			$permitidosUsuario = '/^[a-zA-Z0-9_]{1,50}$/i';
 			if (preg_match($permitidosUsuario,$usuario)){
 
 				if (strlen($usuario)>=3 & strlen($usuario)<=12) {

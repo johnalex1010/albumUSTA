@@ -189,7 +189,7 @@ switch ($op) {
 		Coordinación Gestión Ambiental, tel: 587 87 97 ext: 1903</p>
 		<p>Todos los derechos reservados.</p>
 		<p>Diseño y desarrollo, Departamento de Comunicaciones</p>
-		<p>terminos y condiciones <a href="docs/Terminos_y_Condiciones.pdf" target="_blank">aquí</a></p>
+		<p><a class="btnAside botonDos" style="display: inline-block;" href="docs/Terminos_y_Condiciones.pdf" target="_blank">Términos y condiciones aquí</a></p>
 	</footer>
 
 	
@@ -197,17 +197,3 @@ switch ($op) {
 	<script src="js/main-min.js"></script>
 </body>
 </html>
-<?php
-// echo $h = date("Y-m-d h:i:s");
-// echo $h = "2019-02-28 05:52:34";
-// echo "<br>";
-// echo $b ="2019-02-28 05:52:33";
-// echo "<br>";
-// if ($h == $b) {
-// 	echo "es igual";
-// }elseif ($h > $b) {
-// 	echo "es mayor";
-// }else{
-// 	echo "es menor";
-// }
-?>

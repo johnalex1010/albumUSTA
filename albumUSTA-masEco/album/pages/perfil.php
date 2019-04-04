@@ -7,7 +7,7 @@
 				<li><span class="icon-calendar"></span><strong> Fecha de Registro:</strong> <?php echo $row['fechaRegis'] ?></li>
 				<li><span class="icon-hashtag"></span><strong> Numero de documento:</strong> <?php echo $row['documento'] ?></li>
 				<li><span class="icon-arroba"></span><strong> Correo:</strong> <?php echo $row['email'] ?></li>
-				<li><span class="icon-profile"></span><strong> Usuario:</strong> <?php echo $row['usuario'] ?></li>
+				<li><span class="icon-user"></span><strong> Usuario:</strong> <?php echo $row['usuario'] ?></li>
 			<!-- <li><span class="icon-top10"></span><strong> Posición en la tabla general:</strong> <?php echo $td['rank'] ?></li> -->
 			</ul>
 			<a href="album/?op=cambioPass" class="botonDos">Cambiar contraseña</a>

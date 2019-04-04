@@ -17,9 +17,10 @@ $password = $_POST['password'];
 require "../otros/querys.php";
 
 
-if ($resultUsuario->num_rows > 0) {
-
-	$row = $resultUsuario->fetch_array(MYSQLI_ASSOC);
+// if ($resultUsuario->num_rows > 0) {
+$row = $resultUsuario->fetch_array(MYSQLI_ASSOC);
+echo $row['usuario'];
+if ($row['usuario']===$usuario) {
 	if (md5($password) == $row['password']) { 
 
 		$_SESSION['loggedin'] = true;
@@ -33,13 +34,10 @@ if ($resultUsuario->num_rows > 0) {
 		$_SESSION['msjLogin'] = "El usuario o la contraseña estan incorrectos.";
 		$_SESSION['classError'] = "error";
 		header('location:index.php');
-	}   
-}else{
+	} 
+ }else{
 	$_SESSION['msjLogin'] = "El usuario o la contraseña estan incorrectos.";
-	$_SESSION['classError'] = "error";
-	header('location:index.php');
-}
-
-
-
+ 	$_SESSION['classError'] = "error";
+ 	header('location:index.php');
+ }
  ?>
