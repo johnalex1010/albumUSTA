@@ -309,13 +309,26 @@ table{
 .tablaDatos{
   border-collapse: collapse;
   width: 100%;
-  margin: 2rem 0rem;
-  border: 1px solid #F1F1F1;
+  margin: 0.5rem 0rem;
+  /*border: 1px solid #F1F1F1;*/
+  box-shadow: 2px 2px 5px rgba(0,0,0, 0.2);
 }
+.statics{
+  box-shadow: 0px 0px 0px;
+}
+.statics p{
+  padding: 0.5rem !important;
+  border-radius: 2px;
+  background: #BBBBBB !important;
+  text-shadow: 1px 1px 2px #000;
+  font-family: 'gobold_extra1regular';
+}
+
 .tablaDatos th, .tablaDatos td{
   text-align: left;
   padding: 0.7rem;
   text-align: center;
+  border-radius: 2px 2px 0 0;
 }
 .tablaDatos th{
   background: #bbb;
@@ -330,8 +343,11 @@ table{
 .titleContent{
   background: #8A9E76;
   font-size: 1.7rem;
-  padding: 0.3rem;
-  border-bottom: 8px solid #52663C;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 5px #52663C;
+  /*border-bottom: 8px solid #52663C;*/
+  border-radius: 2px;
+  text-align:center;
 }
 .msjEmail{
   background: #17BA9C;
@@ -1277,4 +1293,39 @@ padding: 1rem;
 .tablaPosiciones input[type="submit"]{
   width: 100px;
   margin: auto;
+}
+.penalizado{
+  display: flex;
+  padding: 3rem;
+  min-height: 600px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.penalizado h1{
+  color: #DD4E41;
+  font-size: 3rem;
+}
+.penalizado p{
+  margin: 2rem auto;
+}
+.penalizado .btnPenalizado{
+  background: #808080;
+  text-align: center;
+  margin: auto;
+}
+.penalizado .btnPenalizadoTC{
+  display: inline-block;
+  text-decoration: underline;
+}
+.cierreCampania{
+  /*background: #;*/
+  text-align: center;
+  padding: 2rem;
+}
+.cierreCampania h1{
+  color: #1ABC9C;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px #000;
+  margin-bottom: 1rem;
 }

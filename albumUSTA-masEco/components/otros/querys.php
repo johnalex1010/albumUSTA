@@ -39,43 +39,44 @@ $contarLaminita = "SELECT count(*) AS visualizar FROM t_album_".$usuario." WHERE
 //Ordenar tabla de posiciones de albúm y estadísticas - USTA COLOMBIA
 $set = "SET @rank=0";
 $set1 = $conexion->query($set);
-$tabla = "SELECT *, @rank:=@rank+1 AS rank FROM t_user_album ORDER BY porcentaje DESC, ultimaFechaLaminita ASC LIMIT 10";
+// $tabla = "SELECT *, @rank:=@rank+1 AS rank FROM t_user_album ORDER BY porcentaje DESC, ultimaFechaLaminita ASC LIMIT 10";
+$tabla ="SELECT *, @rank:=@rank+1 AS rank FROM t_user_album WHERE (perfil = 1 OR perfil = 0) ORDER BY porcentaje DESC, ultimaFechaLaminita ASC LIMIT 10";
 $tabla1 = $conexion->query($tabla);
 
 //Ordenar tabla de posiciones de albúm y estadísticas - BOGOTÁ
 $setBogota = "SET @rank=0";
 $set1Bogota = $conexion->query($setBogota);
-$tablaBogota = "SELECT *, @rank:=@rank+1 AS rank FROM t_user_album WHERE sede='Bogotá' ORDER BY porcentaje DESC, ultimaFechaLaminita ASC LIMIT 5";
+$tablaBogota = "SELECT *, @rank:=@rank+1 AS rank FROM t_user_album WHERE sede='Bogotá' AND (perfil = 1 OR perfil = 0) ORDER BY porcentaje DESC, ultimaFechaLaminita ASC LIMIT 3";
 $tabla1Bogota = $conexion->query($tablaBogota);
 
 //Ordenar tabla de posiciones de albúm y estadísticas - TUNJA
 $setTunja = "SET @rank=0";
 $set1Tunja = $conexion->query($setTunja);
-$tablaTunja = "SELECT *, @rank:=@rank+1 AS rank FROM t_user_album WHERE sede='Tunja' ORDER BY porcentaje DESC, ultimaFechaLaminita ASC LIMIT 5";
+$tablaTunja = "SELECT *, @rank:=@rank+1 AS rank FROM t_user_album WHERE sede='Tunja' AND (perfil = 1 OR perfil = 0) ORDER BY porcentaje DESC, ultimaFechaLaminita ASC LIMIT 3";
 $tabla1Tunja = $conexion->query($tablaTunja);
 
 //Ordenar tabla de posiciones de albúm y estadísticas - BUCARAMANGA
 $setBucaramanga = "SET @rank=0";
 $set1Bucaramanga = $conexion->query($setBucaramanga);
-$tablaBucaramanga = "SELECT *, @rank:=@rank+1 AS rank FROM t_user_album WHERE sede='Bucaramanga' ORDER BY porcentaje DESC, ultimaFechaLaminita ASC LIMIT 5";
+$tablaBucaramanga = "SELECT *, @rank:=@rank+1 AS rank FROM t_user_album WHERE sede='Bucaramanga' AND (perfil = 1 OR perfil = 0) ORDER BY porcentaje DESC, ultimaFechaLaminita ASC LIMIT 3";
 $tabla1Bucaramanga = $conexion->query($tablaBucaramanga);
 
 //Ordenar tabla de posiciones de albúm y estadísticas - MEDELLÍN
 $setMedellin = "SET @rank=0";
 $set1Medellin = $conexion->query($setMedellin);
-$tablaMedellin = "SELECT *, @rank:=@rank+1 AS rank FROM t_user_album WHERE sede='Medellín' ORDER BY porcentaje DESC, ultimaFechaLaminita ASC LIMIT 5";
+$tablaMedellin = "SELECT *, @rank:=@rank+1 AS rank FROM t_user_album WHERE sede='Medellín' AND (perfil = 1 OR perfil = 0) ORDER BY porcentaje DESC, ultimaFechaLaminita ASC LIMIT 3";
 $tabla1Medellin = $conexion->query($tablaMedellin);
 
 //Ordenar tabla de posiciones de albúm y estadísticas - VILLAVICENCIO
 $setVillavicencio = "SET @rank=0";
 $set1Villavicencio = $conexion->query($setVillavicencio);
-$tablaVillavicencio = "SELECT *, @rank:=@rank+1 AS rank FROM t_user_album WHERE sede='Villavicencio' ORDER BY porcentaje DESC, ultimaFechaLaminita ASC LIMIT 5";
+$tablaVillavicencio = "SELECT *, @rank:=@rank+1 AS rank FROM t_user_album WHERE sede='Villavicencio' AND (perfil = 1 OR perfil = 0) ORDER BY porcentaje DESC, ultimaFechaLaminita ASC LIMIT 3";
 $tabla1Villavicencio = $conexion->query($tablaVillavicencio);
 
 //Ordenar tabla de posiciones de albúm y estadísticas - DISTANCIA
 $setDistancia = "SET @rank=0";
 $set1Distancia = $conexion->query($setDistancia);
-$tablaDistancia = "SELECT *, @rank:=@rank+1 AS rank FROM t_user_album WHERE sede='Distancia' ORDER BY porcentaje DESC, ultimaFechaLaminita ASC LIMIT 5";
+$tablaDistancia = "SELECT *, @rank:=@rank+1 AS rank FROM t_user_album WHERE sede='Distancia' AND (perfil = 1 OR perfil = 0) ORDER BY porcentaje DESC, ultimaFechaLaminita ASC LIMIT 3";
 $tabla1Distancia = $conexion->query($tablaDistancia);
 
 

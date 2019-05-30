@@ -39,7 +39,7 @@
 				<?php } ?>
 
 			</table>
-			<a href="album/?op=topFiveSedes">Ver TOP 5 de sedes y seccionales</a>
+			<a class="botonDos" href="album/?op=topFiveSedes">Ver TOP 3 de sedes y seccionales</a>
 		</div>
 	</div>
 </div>

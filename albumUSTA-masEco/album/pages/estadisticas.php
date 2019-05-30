@@ -1,18 +1,20 @@
 <div class="estadisticas">
 <h3 class="titleContent">ESTADÍSTICAS</h3>
-<p>Aquí encontrara y podrá descargar las estadísticas de la interacción de los usuarios registrados y sus respectivos progresos con el álbum de la excelencia.</p>
+<p>Aquí encontrara y podrá descargar las estadísticas de la interacción de los usuarios registrados y sus respectivos progresos con el álbum Santoto más Planeta.</p>
 <a href="album/asset/exportar.php"><span class="icon-donwload"></span>  Exportar de forma total.</a>
-<table class="tablaDatos">
+<table class="tablaDatos statics" >
 	<tr>
 		<form action="album/asset/exportar.php" method="POST">
-			<td><p>Fecha rango 1</p><input type="date" name="fecha1"></td>
-			<td><p>Fecha rango 2</p><input type="date" name="fecha2"></td>
+			<td><p>Rango de fecha 1</p><input type="date" name="fecha1"></td>
+			<td><p>Rango de fecha 2</p><input type="date" name="fecha2"></td>
 			<td><span class="icon-donwload"></span><input type="submit"  name="btnExport" value="Exportar por fechas"></td>
 			<td></td>
 			<td></td>
 			<td></td>
 		</form>
 	</tr>
+</table>
+<table class="tablaDatos">
 	<tr>
 		<th>Fecha Registro</th>
 		<th>Nombres</th>

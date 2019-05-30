@@ -30,13 +30,13 @@ ob_start();
 <div>
 	<h3 class="titleContent">VISUALIZACIÓN DE LAMINITA: <?php echo$rstLaminitas['laminitaLadoA']; ?></h3>
 	<div class="ingresoLaminita">
-		<p>Estás viendo la laminita número <strong><?php echo $rstLaminitas['id_laminita']; ?></strong> del álbum Santoto + Planeta.</p>
+		<p>Estás viendo la lámina número <strong><?php echo $rstLaminitas['id_laminita']; ?></strong> del álbum Santoto más Planeta.</p>
 	</div>
 
 	<div class="contenedorLaminitas">
 		<div class="contentLaminita">
 			<figure class="imgBig">
-				<img src="img/laminitas/<?php echo $rstLaminitas['laminitaLadoA']; ?>.png" class="frontal" alt="Cod laminita album | Mundial USTA" />
+				<img src="img/laminitas/<?php echo $rstLaminitas['laminitaLadoA']; ?>.png" class="frontal" alt="Cod lámina álbum | Santoto más Planeta" />
 				<figcaption class="trasera">
 					<h3>COD: <?php echo $rstLaminitas['laminitaLadoA']; ?></h3>
 					<p><?php echo $rstLaminitas['laminitaLadoB']; ?></p>

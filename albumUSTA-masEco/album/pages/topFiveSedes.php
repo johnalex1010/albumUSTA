@@ -1,7 +1,7 @@
 <div class="top5Sedes">
 	<div class="grilla">
 		<div class="celda celdax3">
-			<h3 class="titleContent">TOP 5 - BOGOTÁ</h3>
+			<h3 class="titleContent">TOP 3 - BOGOTÁ</h3>
 			<table class="tablaDatos">
 				<tr>
 					<th>Posición</th>
@@ -28,7 +28,7 @@
 			</table>
 		</div>
 		<div class="celda celdax3">
-			<h3 class="titleContent">TOP 5 - USTA DISTANCIA</h3>
+			<h3 class="titleContent">TOP 3 - USTA DISTANCIA</h3>
 			<table class="tablaDatos">
 				<tr>
 					<th>Posición</th>
@@ -56,7 +56,7 @@
 		</div>
 		
 		<div class="celda celdax3">
-			<h3 class="titleContent">TOP 5 - BUCARAMANGA</h3>
+			<h3 class="titleContent">TOP 3 - BUCARAMANGA</h3>
 			<table class="tablaDatos">
 				<tr>
 					<th>Posición</th>
@@ -86,7 +86,7 @@
 
 	<div class="grilla">
 		<div class="celda celdax3">
-			<h3 class="titleContent">TOP 5 - TUNJA</h3>
+			<h3 class="titleContent">TOP 3 - TUNJA</h3>
 			<table class="tablaDatos">
 				<tr>
 					<th>Posición</th>
@@ -113,7 +113,7 @@
 			</table>
 		</div>
 		<div class="celda celdax3">
-			<h3 class="titleContent">TOP 5 - MEDELLÍN</h3>
+			<h3 class="titleContent">TOP 3 - MEDELLÍN</h3>
 			<table class="tablaDatos">
 				<tr>
 					<th>Posición</th>
@@ -140,7 +140,7 @@
 			</table>
 		</div>
 		<div class="celda celdax3">
-			<h3 class="titleContent">TOP 5 - VILLAVICENCIO</h3>
+			<h3 class="titleContent">TOP 3 - VILLAVICENCIO</h3>
 			<table class="tablaDatos">
 				<tr>
 					<th>Posición</th>
